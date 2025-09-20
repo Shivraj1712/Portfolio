@@ -16,9 +16,10 @@ const Intro: React.FC = () => {
         <p className="text-lg md:text-xl mb-8">
           I'm a learning web developer building web apps with React JS, TypeScript, Tailwind CSS, Framer Motion, and Axios, while also learning Data Structures and Algorithms in C++.
         </p>
-        <button href="#projects" className="px-6 py-3 border-2 border-transparent bg-cyan-400 text-gray-900 font-semibold rounded-lg shadow-lg hover:bg-gray-900 hover:text-cyan-400 hover:border-cyan-400 transition">
+        <a href="#projects"><button className="px-6 py-3 border-2 border-transparent bg-cyan-400 text-gray-900 font-semibold rounded-lg shadow-lg hover:bg-gray-900 hover:text-cyan-400 hover:border-cyan-400 transition">
           View Projects
         </button>
+        </a>
       </div>
     </motion.div>
   );
