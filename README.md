@@ -1,69 +1,80 @@
-# React + TypeScript + Vite
+# Shivrajsinh Maharaul | Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio! This project showcases my skills, projects, and contact information. Built with **React JS**, **TypeScript**, **Tailwind CSS**, and **Framer Motion**, it is fully responsive and modern.
 
-Currently, two official plugins are available:
+## 🌐 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Check out the live site here: [View Site](https://shivrajportfolio.vercel.app/)
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* **Frontend:** React JS, TypeScript, Tailwind CSS
+* **Animations:** Framer Motion
+* **Icons:** React Icons
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📂 Project Structure
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+* `src/components/` – All React components
+* `src/assets/` – Images and other static assets
+* `src/main.tsx` – Entry point of the application
+* `vite.config.ts` – Vite configuration file
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🚀 Features
+
+* Smooth animations on section load with Framer Motion
+* Responsive layout for desktop and mobile
+* Projects section with live demo links
+* Contact section with direct links to LinkedIn, GitHub, LeetCode, Instagram, email, and phone
+* Clean, modern design with dark mode theme
+
+## 📖 Sections
+
+1. **Intro** – Welcome message and overview
+2. **About Me** – Personal introduction and skills
+3. **Skills** – Technologies I work with
+4. **Projects** – Portfolio of my work
+5. **Contact** – Direct links to reach me
+6. **Footer** – Social links and copyright
+
+## 🔗 Social Links
+
+* [LinkedIn](https://www.linkedin.com/in/shivrajsinh-maharaul-677379321/)
+* [GitHub](https://github.com/Shivraj1712/)
+* [LeetCode](https://leetcode.com/u/Shivraj_Operator/)
+* [Instagram](https://www.instagram.com/shivraj_maharaul_17/)
+* Email: [shivrajmaharaul688@gmail.com](mailto:shivrajmaharaul688@gmail.com)
+* Phone: +91 6355540489
+
+## 📦 Installation
+
+1. Clone the repo:
+
+```bash
+git clone https://github.com/Shivraj1712/Portfolio.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Install dependencies:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+3. Run locally:
+
+```bash
+npm run dev
+```
+
+4. Build for production:
+
+```bash
+npm run build
+```
+
+## 📜 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+Created with ❤️ by **Shivrajsinh Maharaul**
