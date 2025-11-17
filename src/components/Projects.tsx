@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 const projects = [
   { title: "WeatherIQ", description: "A responsive web app to fetch real-time weather by city or location.", techStack: "HTML | CSS | Vanilla JS | OpenWeatherMap API", image: WeatherImg, link: "https://weatheriq1712.netlify.app/" },
   { title: "Animated Todo App", description: "A Todo List application with smooth Framer Motion animations.", techStack: "React | TypeScript | Bootstrap | Framer Motion", image: TodoImg, link: "https://todolistreactandbootstrap.netlify.app/" },
-  { title: "React Jobs Dashboard", description: "A multi-page jobs dashboard with responsive design, animations, and routing.", techStack: "React | TypeScript | Tailwind CSS | Framer Motion | React Router", image: JobsImg, link: "#" }
+  { title: "React Jobs Dashboard", description: "A multi-page jobs dashboard with responsive design, animations, and routing.", techStack: "React | TypeScript | Tailwind CSS | Framer Motion | React Router", image: JobsImg, link: "https://jobsherereactroutingpractice.netlify.app/" }
 ];
 
 const Projects: React.FC = () => {
