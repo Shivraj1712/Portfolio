@@ -26,20 +26,24 @@
 }
 
 :root {
-  --bg-main: oklch(0.12 0.01 250);
-  --bg-card: oklch(0.16 0.01 250);
+  --bg-main: oklch(0.10 0.015 255);
+  
+  --bg-card: oklch(0.14 0.02 255);
+  --bg-overlay: oklch(0.12 0.016 255);
+  --border-line: oklch(0.22 0.02 255);
+  --text-main: oklch(0.95 0.01 255);
+  --text-muted: oklch(0.60 0.01 255);
+  --text-dim: oklch(0.40 0.01 255);
 
-  --text-main: oklch(0.95 0.01 250);
-  --text-muted: oklch(0.65 0.01 250);
-
-  --border-line: oklch(0.28 0.01 250);
-
-  --cyan-accent: oklch(0.85 0.22 195);
+  --cyan-accent: oklch(0.82 0.24 195);
+  --amber-accent: oklch(0.78 0.18 72);
+  --glow-cyan: oklch(0.82 0.24 195 / 0.12);
+  --glow-amber: oklch(0.78 0.18 72 / 0.12);
 }
 
 @layer base {
   * {
-    @apply border-border outline-ring/40 transition-colors duration-150;
+    @apply border-border outline-ring/40 transition-colors duration-200;
   }
 
   html {
@@ -48,14 +52,14 @@
   }
 
   body {
-    @apply min-h-screen bg-background text-foreground flex flex-col selection:bg-accent selection:text-accent-foreground;
+    @apply min-h-screen bg-background text-foreground flex flex-col selection:bg-accent selection:text-accent-foreground overflow-x-hidden;
   }
 
   h1,
   h2,
   h3,
   h4 {
-    @apply text-foreground font-heading font-semibold tracking-tight;
+    @apply text-foreground font-heading font-black tracking-tight;
   }
 
   p {
@@ -65,6 +69,41 @@
   code,
   pre {
     font-family: var(--font-mono);
-    @apply text-sm tracking-normal bg-card border border-border rounded-md px-1.5 py-0.5 text-accent;
+    @apply text-xs tracking-normal bg-card border border-border rounded-md px-1.5 py-0.5 text-accent;
   }
+}
+
+.terminal-screen {
+  position: relative;
+  overflow: hidden;
+}
+
+.terminal-screen::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 2;
+  background-size: 100% 3px, 6px 100%;
+  pointer-events: none;
+}
+
+.card-glow-hover {
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), 
+              border-color 0.3s ease, 
+              box-shadow 0.3s ease;
+}
+
+.card-glow-hover:hover {
+  border-color: oklch(0.82 0.24 195 / 0.4);
+  box-shadow: 0 10px 30px -10px var(--glow-cyan);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

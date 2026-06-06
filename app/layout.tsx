@@ -19,25 +19,27 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Shivrajsinh Maharaul | Portfolio",
+    default: "Shivrajsinh Maharaul | Senior Backend & Systems Engineer",
     template: "%s | Shivrajsinh Maharaul"
   },
-  description: "Official portfolio of Shivrajsinh Maharaul, a Software Engineer specializing in backend development, Go (Golang), and building high-performance web applications.",
+  description: "Official portfolio of Shivrajsinh Maharaul. Systems engineer specializing in high-performance distributed architectures, real-time market data pipelines, and Go (Golang) backend solutions.",
   keywords: [
     "Shivrajsinh Maharaul",
     "Shivraj Maharaul",
-    "Shivraj",
-    "Shivrajsinh",
-    "Shivrajsinh Maharaul Portfolio",
-    "Backend Developer",
-    "Go Developer",
-    "Golang Developer",
-    "Software Engineer Portfolio"
+    "Shivraj Backend",
+    "Go Systems Developer",
+    "Golang Software Engineer",
+    "Distributed Systems Architect",
+    "High Latency Systems Portfolio",
+    "Vercel Next.js Developer"
   ],
   metadataBase: new URL("https://shivrajportfolio.vercel.app/"),
   alternates: {
     canonical: "/",
   },
+  generator: "Next.js",
+  applicationName: "Shivrajsinh Maharaul Portfolio",
+  category: "technology",
   robots: {
     index: true,
     follow: true,
@@ -53,21 +55,21 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://shivrajportfolio.vercel.app/",
-    title: "Shivrajsinh Maharaul | Software Engineer Portfolio",
-    description: "Explore the technical projects and full-stack capabilities of Shivrajsinh Maharaul.",
+    title: "Shivrajsinh Maharaul | Systems Developer Portfolio",
+    description: "Explore performance-engineered backend solutions, high-throughput pipelines, and robust double-entry financial ledger architectures built with Go.",
     siteName: "Shivrajsinh Maharaul Portfolio",
     images: [
       {
         url: "/profile.jpeg",
         width: 1200,
         height: 630,
-        alt: "Shivrajsinh Maharaul Portfolio Preview",
+        alt: "Shivrajsinh Maharaul Systems Portfolio Preview",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shivrajsinh Maharaul | Software Engineer Portfolio",
+    title: "Shivrajsinh Maharaul | Software Engineer",
     description: "Explore the technical projects and full-stack capabilities of Shivrajsinh Maharaul.",
     images: ["/profile.jpeg"],
   },
@@ -92,12 +94,14 @@ export default function RootLayout({
     "name": "Shivrajsinh Maharaul",
     "url": "https://shivrajportfolio.vercel.app/",
     "image": "https://shivrajportfolio.vercel.app/profile.jpeg",
-    "jobTitle": "Software Engineer",
+    "jobTitle": "Senior Backend & Systems Engineer",
     "knowsAbout": [
       "Backend Development",
       "Go (Golang)",
-      "Web Applications",
-      "Software Engineering"
+      "Distributed Systems",
+      "Websockets",
+      "Database Optimization",
+      "Next.js Portfolio Design"
     ],
     "sameAs": [
       "https://github.com/Shivraj1712/",
@@ -110,16 +114,22 @@ export default function RootLayout({
       lang="en"
       className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, "font-sans", inter.variable)}
     >
-      <body className="min-h-full flex flex-col justify-between">
+      <head />
+      <body className="min-h-full flex flex-col justify-between selection:bg-accent selection:text-accent-foreground">
         <script
           key="structured-data"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        
+        <div id="page-curtain" className="fixed inset-0 bg-background z-[9999] pointer-events-none transition-transform duration-700 ease-[cubic-bezier(0.85,0,0.15,1)] translate-y-0" />
+
         <Navbar />
-        <main className="w-full flex-grow">
+        
+        <main className="w-full flex-grow relative">
           {children}
         </main>
+        
         <Footer />
       </body>
     </html>
