@@ -86,7 +86,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Structured data to define your professional entity to search AI engines
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
@@ -113,6 +112,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col justify-between">
         <script
+          key="structured-data"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
