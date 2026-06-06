@@ -77,7 +77,7 @@ export const metadata: Metadata = {
     apple: "/profile.jpeg",
   },
   verification: {
-    google: "BLnYYf4UQbPSccTN_N2KMmkUgBif_lyT4GJqYGwoz4M"
+    google: "vIecXgZBxrLoQM0nJpiOvJPl7fgnjUs3Vt0xEuWzRIE"
   }
 };
 
