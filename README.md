@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio Website | Shivrajsinh Maharaul
 
-## Getting Started
+A professional developer portfolio engineered to showcase software engineering capabilities, clean code architecture, and modern UI/UX design.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🌐 Live Website
+* **Production Link:** [View Live Site](https://shivrajportfolio.vercel.app/)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🧑‍💻 About Me
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+I am a software engineer focused on building robust, high-performance web applications. My development philosophy centers on creating clean, type-safe code architectures, optimizing database configurations, and crafting highly responsive interfaces. 
 
-## Learn More
+With strong experience building scalable software across the backend and frontend ecosystems, I specialize in implementing secure systems, managing stateful session storage layers, and deploying cloud infrastructure.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚀 Tech Stack & Core Competencies
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Backend Engineering
+* **Languages:** Go (Golang), C++, TypeScript, JavaScript
+* **Frameworks:** Fiber v2, Node.js, Express.js
+* **Database & ORM:** PostgreSQL (Neon Serverless), GORM
+* **Architectural Knowledge:** RESTful API Design, Database Session Token Authentication (Stateful), Cookie-Based Session Management, Database Connection Pooling, and Structured Error Logging
 
-## Deploy on Vercel
+### Frontend Engineering
+* **Frameworks & Libraries:** Next.js (App Router), React
+* **Styling & UI:** Tailwind CSS, Shadcn/ui, Lucide Icons
+* **Core Patterns:** Mobile-First Responsive Layouts, Dynamic Component States, and Smooth Anchor-Link Navigation
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 💎 Project Infrastructure & Features
+
+* **Single-Page Navigation:** Implements seamless anchor-link scrolling connecting the hero layout, tech stack breakdowns, and contact information.
+* **Optimized UI Performance:** Features an interactive, responsive mobile navigation overlay combined with clean, scannable component cards.
+* **Production Deployment:** Configured for continuous integration and static hosting directly through Vercel's global edge network.
