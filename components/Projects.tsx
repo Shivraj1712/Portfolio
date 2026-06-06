@@ -34,7 +34,7 @@ const Projects: React.FC = () => {
 
                         <div className='flex gap-6 font-mono text-sm'>
                             <span className='text-muted/50 cursor-not-allowed'>
-                                PRIVATE_REPOSITORY // WORK_IN_PROGRESS
+                                WORK_IN_PROGRESS
                             </span>
                         </div>
                     </div>
