@@ -76,6 +76,9 @@ export const metadata: Metadata = {
     shortcut: "/profile.jpeg",
     apple: "/profile.jpeg",
   },
+  verification: {
+    google: "BLnYYf4UQbPSccTN_N2KMmkUgBif_lyT4GJqYGwoz4M"
+  }
 };
 
 export default function RootLayout({
@@ -88,9 +91,9 @@ export default function RootLayout({
       lang="en"
       className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, "font-sans", inter.variable)}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col justify-between">
         <Navbar />
-        <main className="flex-1">
+        <main className="w-full flex-grow">
           {children}
         </main>
         <Footer />
