@@ -2,15 +2,16 @@ import React from 'react'
 
 const Footer: React.FC = () => {
     return (
-        <footer id="footer" className='flex items-center justify-center p-5 bg-background border-t border-border w-full'>
-            <div className='flex items-center sm:items-center w-[82vw] justify-between flex-col sm:flex-row gap-4 py-2 font-mono text-[11px] text-muted'>
-                <div>
-                    <p>© 2026 // SHIVRAJSINH MAHARAUL</p>
+        <footer id="footer" className='w-full border-t border-border/40 bg-background py-8'>
+            <div className='max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 font-mono text-[10px] text-muted'>
+                <div className='flex flex-col gap-1'>
+                    <span className='text-accent font-bold'>SHIVRAJ</span>
+                    <span>© 2026 // DESIGNED FOR PERFORMANCE. BUILT FOR SCALE.</span>
                 </div>
 
-                <div className='flex items-center gap-6'>
+                <div className='flex items-center gap-6 text-[11px]'>
                     <a
-                        href="https://www.linkedin.com/in/shivrajsinh-maharaul-677379321/"
+                        href="https://github.com/Shivraj1712/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-accent transition-colors"
@@ -18,7 +19,7 @@ const Footer: React.FC = () => {
                         GITHUB
                     </a>
                     <a
-                        href="https://github.com/Shivraj1712/"
+                        href="https://www.linkedin.com/in/shivrajsinh-maharaul-677379321/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-accent transition-colors"

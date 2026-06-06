@@ -1,38 +1,58 @@
 import React from 'react'
 
 const Skills: React.FC = () => {
+    const languages = [
+        { name: 'C++', code: '01' },
+        { name: 'GOLANG', code: '02' },
+        { name: 'TYPESCRIPT', code: '03' },
+        { name: 'JAVASCRIPT', code: '04' }
+    ]
+
+    const infrastructure = [
+        { name: 'FIBER_V2', code: '01' },
+        { name: 'RENDER', code: '02' },
+        { name: 'GORM POSTGRESQL', code: '03' },
+        { name: 'NEXTJS', code: '04' },
+        { name: 'VERCEL', code: '05' }
+    ]
+
     return (
-        <section id="skills" className='flex items-center justify-center gap-10 p-5 min-h-[80vh] flex-col bg-card'>
-            <div className='flex items-center md:items-start w-[82vw] justify-around flex-col'>
-                <p className='text-accent text-md border border-accent p-1 px-2 font-semibold rounded-lg'>TECH STACK</p>
+        <section id="skills" className='max-w-7xl mx-auto px-6 py-16 flex flex-col gap-8'>
+            <div className='border-b border-border/60 pb-4'>
+                <p className='font-mono text-xs text-accent tracking-widest'>02 // TECH_STACK</p>
             </div>
-            <div className='flex items-center md:items-start w-[82vw] justify-around gap-4 flex-col md:flex-row'>
-                <div className="bg-background p-2 flex flex-col items-center md:items-center justify-around text-start text-md border border-border rounded-lg h-64 sm:h-48 w-[80vw] md:w-[41vw]">
-                    <div className='flex items-start'>
-                        <ul className='list-disc text-accent flex items-start'>
-                            <li> <span className='text-muted text-lg'>LANGUAGES</span></li>
-                        </ul>
+            
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+                <div className="bg-card/40 border border-border rounded-xl p-6 flex flex-col gap-6">
+                    <div className='flex items-center gap-2 border-b border-border/40 pb-3'>
+                        <span className='h-1.5 w-1.5 rounded-full bg-accent' />
+                        <h3 className='font-mono text-xs tracking-widest text-foreground font-bold'>LANGUAGES</h3>
                     </div>
-                    <ul className='text-xs flex items-start md:items-center justify-around flex-col sm:flex-row gap-3'>
-                        <li className='py-1 px-3 text-primary border-muted text-center border'>C++</li>
-                        <li className='py-1 px-3 text-primary border-muted text-center border'>GOLANG</li>
-                        <li className='py-1 px-3 text-primary border-muted text-center border'>TYPESCRIPT</li>
-                        <li className='py-1 px-3 text-primary border-muted text-center border'>JAVASCRIPT</li>
-                    </ul>
+                    
+                    <div className='grid grid-cols-2 gap-3'>
+                        {languages.map((lang) => (
+                            <div key={lang.name} className='bg-background/50 border border-border/80 hover:border-accent/40 hover:bg-background/80 transition-all duration-200 p-4 rounded-md h-20 flex flex-col justify-between font-mono'>
+                                <span className='text-xs text-foreground font-bold'>{lang.name}</span>
+                                <span className='text-[9px] text-muted/60'>{lang.code}</span>
+                            </div>
+                        ))}
+                    </div>
                 </div>
-                <div className="bg-background p-2 flex items-center justify-around flex-col text-start text-md border border-border rounded-lg h-64 sm:h-48 w-[80vw] md:w-[41vw]">
-                    <div className='flex items-start'>
-                        <ul className='list-disc text-accent flex items-start'>
-                            <li> <span className='text-muted text-lg'>INFRASTRUCTURE</span></li>
-                        </ul>
+
+                <div className="bg-card/40 border border-border rounded-xl p-6 flex flex-col gap-6">
+                    <div className='flex items-center gap-2 border-b border-border/40 pb-3'>
+                        <span className='h-1.5 w-1.5 rounded-full bg-accent' />
+                        <h3 className='font-mono text-xs tracking-widest text-foreground font-bold'>INFRASTRUCTURE</h3>
                     </div>
-                    <ul className='text-xs flex items-center justify-around flex-col sm:flex-row gap-3'>
-                        <li className='py-1 px-3 text-primary border-muted text-center border'>FIBER_V2</li>
-                        <li className='py-1 px-3 text-primary border-muted text-center border'>RENDER</li>
-                        <li className='py-1 px-3 text-primary border-muted text-center border'>GORM POSTGRESQL</li>
-                        <li className='py-1 px-3 text-primary border-muted text-center border'>NEXTJS</li>
-                        <li className='py-1 px-3 text-primary border-muted text-center border'>VERCEL</li>
-                    </ul>
+                    
+                    <div className='grid grid-cols-2 sm:grid-cols-3 gap-3'>
+                        {infrastructure.map((infra) => (
+                            <div key={infra.name} className='bg-background/50 border border-border/80 hover:border-accent/40 hover:bg-background/80 transition-all duration-200 p-4 rounded-md h-20 flex flex-col justify-between font-mono'>
+                                <span className='text-[10px] text-foreground font-bold leading-tight'>{infra.name}</span>
+                                <span className='text-[9px] text-muted/60'>{infra.code}</span>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>
