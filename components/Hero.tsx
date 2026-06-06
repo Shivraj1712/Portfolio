@@ -52,7 +52,7 @@ const Hero: React.FC = () => {
                     </a>
                     <a 
                         href="#footer" 
-                        className="border border-border text-foreground px-8 sm:px-10 py-3.5 sm:py-4 rounded-lg hover:border-accent hover:text-accent transition-all text-center w-full sm:w-auto"
+                        className="border border-muted/40 text-foreground px-8 sm:px-10 py-3.5 sm:py-4 rounded-lg hover:border-accent hover:text-accent transition-all text-center w-full sm:w-auto"
                     >
                         GET_IN_TOUCH
                     </a>

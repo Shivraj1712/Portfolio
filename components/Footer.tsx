@@ -156,7 +156,7 @@ const Footer: React.FC = () => {
                                 href="https://wa.me/916355540489" 
                                 target="_blank" 
                                 rel="noopener noreferrer"
-                                className="flex-1 border border-border hover:border-accent hover:text-accent text-foreground text-xs font-bold tracking-widest py-4.5 rounded-lg transition-all uppercase text-center cursor-pointer"
+                                className="flex-1 border border-muted/40 hover:border-accent hover:text-accent text-foreground text-xs font-bold tracking-widest py-4.5 rounded-lg transition-all uppercase text-center cursor-pointer"
                             >
                                 CHAT_ON_WHATSAPP
                             </a>
