@@ -11,7 +11,7 @@ const Navbar: React.FC = () => {
             <div className='sticky insect z-[1000] flex items-center justify-around flex-col px-4 w-full py-1 bg-card text-foreground'>
                 <div className='flex items-center justify-between md:justify-around w-full md:min-w-[70vw]'>
                     <div className='flex items-center justify-around gap-4 p-3'>
-                        <p className='text-accent text-xl md:text-2xl lg:text-3xl font-bold'>Shivrajsinh Maharaul</p>
+                        <h1 className='text-accent text-xl md:text-2xl lg:text-3xl font-bold'>Shivrajsinh Maharaul</h1>
                     </div>
                     <div className='hidden md:flex items-center justify-around gap-8 text-muted text-sm font-semibold tracking-wider'>
                         <a href="#skills" className='hover:text-accent transition duration-200'>SKILLS</a>
