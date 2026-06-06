@@ -18,15 +18,15 @@ export const PROJECTS_DATA: Project[] = [
   {
     id: "01",
     title: "StockPulse Engine",
-    description: "Real-time market data streaming engine processing multi-exchange order books. Implements advanced noise filtering and predictive caching.",
+    description: "A real-time stock monitoring application that streams market updates. Built using Go WebSockets for quick message broadcasts and Redis for caching data state.",
     tags: ["GOLANG", "WEBSOCKETS", "REDIS"],
     wip: true,
-    progress: 85,
+    progress: 30,
   },
   {
     id: "02",
     title: "SpendGrid Ledger",
-    description: "Immutable financial ledger system with double-entry validation and distributed transaction management for high-volume payment processing.",
+    description: "A financial tracking ledger that organizes daily expenses, validates entries, and uses PostgreSQL database integration. Deployed live on Render.",
     tags: ["GORM", "POSTGRES", "RENDER"],
     githubUrl: "https://github.com/Shivraj1712/SpendGrid",
     liveUrl: "https://spend-grid-lovat.vercel.app/",
@@ -34,7 +34,7 @@ export const PROJECTS_DATA: Project[] = [
   {
     id: "03",
     title: "Noteitdown System",
-    description: "High-performance data log repository architecture engineered for rapid lookups and linear storage optimization operations.",
+    description: "A responsive markdown note-taking dashboard built using React, Next.js, and styled with Tailwind CSS. Optimized for fast rendering and hosted on Vercel.",
     tags: ["NEXTJS", "REACT", "TAILWIND"],
     githubUrl: "https://github.com/Shivraj1712/notetdown-with-nextjs",
     liveUrl: "https://notetdown-with-nextjs.vercel.app/",
@@ -57,33 +57,35 @@ export const INFRASTRUCTURE_DATA: SkillItem[] = [
 ];
 
 export const MARQUEE_ITEMS = [
-  "PERFORMANCE FIRST",
-  "ZERO LATENCY TOLERANCE",
-  "SYSTEMS THINKING",
-  "IMMUTABLE STATE",
-  "LINEAR SCALING",
+  "EFFICIENT CODE",
+  "API DESIGN",
+  "FULLSTACK SYSTEM",
+  "DATABASE INTEGRATION",
   "CLEAN ARCHITECTURE",
+  "AI FRONTEND DEVELOPMENT",
 ];
 
 export const PHILOSOPHY_PRINCIPLES = [
   {
-    title: "Zero Latency",
-    description: "Account for every byte and CPU cycle. Design systems that respond at speed.",
-    iconCode: "MS",
+    title: "Performance",
+    description: "Optimize database queries, minimize payloads, and design responsive API endpoints.",
+    iconCode: "PF",
   },
   {
-    title: "Zero Ambiguity",
-    description: "Write readable, maintainable, self-documenting code with clear interfaces.",
-    iconCode: "IF",
+    title: "Clarity",
+    description: "Write readable, modular code with clear data structures and sensible file organization.",
+    iconCode: "CL",
   },
   {
-    title: "Zero Waste",
-    description: "Minimize third-party bloating. Favor native efficiency and targeted patterns.",
-    iconCode: "OP",
+    title: "Simplicity",
+    description: "Build clean, user-friendly layouts and avoid bloated third-party libraries.",
+    iconCode: "SM",
   },
 ];
 
 export const SOCIAL_LINKS = {
   github: "https://github.com/Shivraj1712/",
   linkedin: "https://www.linkedin.com/in/shivrajsinh-maharaul-677379321/",
+  instagram: "https://www.instagram.com/shivraj_maharaul_17/",
+  x: "https://x.com/Shivraj1712",
 };

@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
@@ -19,18 +17,17 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Shivrajsinh Maharaul | Senior Backend & Systems Engineer",
+    default: "Shivrajsinh Maharaul | Backend Developer & Tech Enthusiast",
     template: "%s | Shivrajsinh Maharaul"
   },
-  description: "Official portfolio of Shivrajsinh Maharaul. Systems engineer specializing in high-performance distributed architectures, real-time market data pipelines, and Go (Golang) backend solutions.",
+  description: "Official portfolio of Shivrajsinh Maharaul. Backend developer building web applications, designing APIs, and deploying cloud services.",
   keywords: [
     "Shivrajsinh Maharaul",
     "Shivraj Maharaul",
     "Shivraj Backend",
-    "Go Systems Developer",
+    "Go Developer",
     "Golang Software Engineer",
-    "Distributed Systems Architect",
-    "High Latency Systems Portfolio",
+    "Fullstack Developer",
     "Vercel Next.js Developer"
   ],
   metadataBase: new URL("https://shivrajportfolio.vercel.app/"),
@@ -55,21 +52,21 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://shivrajportfolio.vercel.app/",
-    title: "Shivrajsinh Maharaul | Systems Developer Portfolio",
-    description: "Explore performance-engineered backend solutions, high-throughput pipelines, and robust double-entry financial ledger architectures built with Go.",
+    title: "Shivrajsinh Maharaul | Portfolio",
+    description: "Explore backend API design, React frontends, and cloud deployment pipelines.",
     siteName: "Shivrajsinh Maharaul Portfolio",
     images: [
       {
         url: "/profile.jpeg",
         width: 1200,
         height: 630,
-        alt: "Shivrajsinh Maharaul Systems Portfolio Preview",
+        alt: "Shivrajsinh Maharaul Portfolio Preview",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shivrajsinh Maharaul | Software Engineer",
+    title: "Shivrajsinh Maharaul | Software Developer",
     description: "Explore the technical projects and full-stack capabilities of Shivrajsinh Maharaul.",
     images: ["/profile.jpeg"],
   },
@@ -94,14 +91,13 @@ export default function RootLayout({
     "name": "Shivrajsinh Maharaul",
     "url": "https://shivrajportfolio.vercel.app/",
     "image": "https://shivrajportfolio.vercel.app/profile.jpeg",
-    "jobTitle": "Senior Backend & Systems Engineer",
+    "jobTitle": "Backend Developer & Tech Enthusiast",
     "knowsAbout": [
       "Backend Development",
       "Go (Golang)",
-      "Distributed Systems",
-      "Websockets",
       "Database Optimization",
-      "Next.js Portfolio Design"
+      "Next.js Portfolio Design",
+      "React"
     ],
     "sameAs": [
       "https://github.com/Shivraj1712/",
@@ -122,15 +118,9 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         
-        <div id="page-curtain" className="fixed inset-0 bg-background z-[9999] pointer-events-none transition-transform duration-700 ease-[cubic-bezier(0.85,0,0.15,1)] translate-y-0" />
-
-        <Navbar />
-        
         <main className="w-full flex-grow relative">
           {children}
         </main>
-        
-        <Footer />
       </body>
     </html>
   );
