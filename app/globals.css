@@ -1,0 +1,70 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: var(--font-sans), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --font-heading: var(--font-geist-sans), var(--font-sans), system-ui, sans-serif;
+
+  --color-background: var(--bg-main);
+  --color-foreground: var(--text-main);
+  --color-muted: var(--text-muted);
+
+  --color-card: var(--bg-card);
+  --color-border: var(--border-line);
+
+  --color-accent: var(--cyan-accent);
+  --color-accent-foreground: var(--bg-main);
+  --color-ring: var(--cyan-accent);
+
+  --radius-sm: 0.125rem;
+  --radius-md: 0.25rem;
+  --radius-lg: 0.375rem;
+}
+
+:root {
+  --bg-main: oklch(0.12 0.01 250);
+  --bg-card: oklch(0.16 0.01 250);
+
+  --text-main: oklch(0.95 0.01 250);
+  --text-muted: oklch(0.65 0.01 250);
+
+  --border-line: oklch(0.28 0.01 250);
+
+  --cyan-accent: oklch(0.85 0.22 195);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/40 transition-colors duration-150;
+  }
+
+  html {
+    @apply bg-background text-foreground antialiased scroll-smooth;
+    font-family: var(--font-sans);
+  }
+
+  body {
+    @apply min-h-screen bg-background text-foreground flex flex-col selection:bg-accent selection:text-accent-foreground;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply text-foreground font-heading font-semibold tracking-tight;
+  }
+
+  p {
+    @apply text-muted leading-relaxed font-sans;
+  }
+
+  code,
+  pre {
+    font-family: var(--font-mono);
+    @apply text-sm tracking-normal bg-card border border-border rounded-md px-1.5 py-0.5 text-accent;
+  }
+}
