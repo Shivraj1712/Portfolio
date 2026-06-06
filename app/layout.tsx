@@ -3,9 +3,7 @@ import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/Navbar";
-import { Separator } from "@/components/ui/separator";
 import Footer from "@/components/Footer";
-
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
@@ -20,11 +18,63 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Shivrajsinh Maharaul",
-  description: "Portfolio",
-  keywords: ["Shivrajsinh Maharaul", "Shivraj Maharaul", "Shivraj", "Shivrajsinh Maharaul Portfolio", "Backend Developer", "Go Developer"],
+  title: {
+    default: "Shivrajsinh Maharaul | Portfolio",
+    template: "%s | Shivrajsinh Maharaul"
+  },
+  description: "Official portfolio of Shivrajsinh Maharaul, a Software Engineer specializing in backend development, Go (Golang), and building high-performance web applications.",
+  keywords: [
+    "Shivrajsinh Maharaul",
+    "Shivraj Maharaul",
+    "Shivraj",
+    "Shivrajsinh",
+    "Shivrajsinh Maharaul Portfolio",
+    "Backend Developer",
+    "Go Developer",
+    "Golang Developer",
+    "Software Engineer Portfolio"
+  ],
+  metadataBase: new URL("https://shivrajportfolio.vercel.app/"),
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://shivrajportfolio.vercel.app/",
+    title: "Shivrajsinh Maharaul | Software Engineer Portfolio",
+    description: "Explore the technical projects and full-stack capabilities of Shivrajsinh Maharaul.",
+    siteName: "Shivrajsinh Maharaul Portfolio",
+    images: [
+      {
+        url: "/profile.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Shivrajsinh Maharaul Portfolio Preview",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Shivrajsinh Maharaul | Software Engineer Portfolio",
+    description: "Explore the technical projects and full-stack capabilities of Shivrajsinh Maharaul.",
+    images: ["/profile.jpeg"],
+  },
   icons: {
     icon: "/profile.jpeg",
+    shortcut: "/profile.jpeg",
+    apple: "/profile.jpeg",
   },
 };
 
@@ -40,7 +90,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <Navbar />
-        <main>
+        <main className="flex-1">
           {children}
         </main>
         <Footer />
