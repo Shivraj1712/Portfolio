@@ -86,12 +86,36 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Structured data to define your professional entity to search AI engines
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Shivrajsinh Maharaul",
+    "url": "https://shivrajportfolio.vercel.app/",
+    "image": "https://shivrajportfolio.vercel.app/profile.jpeg",
+    "jobTitle": "Software Engineer",
+    "knowsAbout": [
+      "Backend Development",
+      "Go (Golang)",
+      "Web Applications",
+      "Software Engineering"
+    ],
+    "sameAs": [
+      "https://github.com/Shivraj1712/",
+      "https://www.linkedin.com/in/shivrajsinh-maharaul-677379321/"
+    ]
+  };
+
   return (
     <html
       lang="en"
       className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, "font-sans", inter.variable)}
     >
       <body className="min-h-full flex flex-col justify-between">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <Navbar />
         <main className="w-full flex-grow">
           {children}
