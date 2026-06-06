@@ -9,12 +9,12 @@ const Navbar: React.FC = () => {
         <header className='sticky top-0 z-[1000] w-full border-b border-border bg-background/80 backdrop-blur-md'>
             <div className='max-w-7xl mx-auto px-6 h-16 flex items-center justify-between'>
                 <div className='flex items-center gap-2'>
-                    <a href="#" className='font-mono text-sm tracking-widest text-accent font-bold hover:opacity-80 transition-opacity'>
+                    <a href="#" className='font-mono text-base tracking-widest text-accent font-bold hover:opacity-80 transition-opacity'>
                         SHIVRAJ // P.01
                     </a>
                 </div>
                 
-                <nav className='hidden md:flex items-center gap-8 font-mono text-xs tracking-wider'>
+                <nav className='hidden md:flex items-center gap-8 font-mono text-sm tracking-wider'>
                     <a href="#projects" className='text-muted hover:text-foreground transition-colors'>PROJECTS</a>
                     <a href="#philosophy" className='text-muted hover:text-foreground transition-colors'>PHILOSOPHY</a>
                     <a href="#footer" className='text-muted hover:text-foreground transition-colors'>CONTACT</a>
@@ -31,7 +31,7 @@ const Navbar: React.FC = () => {
             </div>
             
             {isMenuOpen && (
-                <div className='md:hidden border-t border-border bg-background/95 px-6 py-4 flex flex-col gap-4 font-mono text-xs tracking-wider'>
+                <div className='md:hidden border-t border-border bg-background/95 px-6 py-4 flex flex-col gap-4 font-mono text-sm tracking-wider'>
                     <a href="#projects" onClick={() => setMenuOpen(false)} className='text-muted hover:text-foreground py-2 border-b border-border/50'>PROJECTS</a>
                     <a href="#philosophy" onClick={() => setMenuOpen(false)} className='text-muted hover:text-foreground py-2 border-b border-border/50'>PHILOSOPHY</a>
                     <a href="#footer" onClick={() => setMenuOpen(false)} className='text-muted hover:text-foreground py-2 border-b border-border/50'>CONTACT</a>

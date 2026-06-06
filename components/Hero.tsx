@@ -4,30 +4,30 @@ const Hero: React.FC = () => {
     return (
         <section className='min-h-[calc(100vh-4rem)] max-w-7xl mx-auto px-6 py-12 md:py-24 flex flex-col md:flex-row items-center justify-between gap-12'>
             <div className='flex flex-col items-start gap-6 w-full md:w-1/2'>
-                <div className='inline-flex items-center gap-2 px-3 py-1.5 bg-card/50 border border-border rounded-md text-xs font-mono tracking-widest text-accent'>
+                <div className='inline-flex items-center gap-2 px-3 py-1.5 bg-card/50 border border-border rounded-md text-sm font-mono tracking-widest text-accent'>
                     <span className='h-2 w-2 rounded-md bg-accent animate-ping' />
                     • BACKEND_DEVELOPER
                 </div>
                 
                 <div className='flex flex-col'>
-                    <h1 className='text-5xl sm:text-6xl lg:text-[5.5rem] font-heading font-black tracking-tighter leading-[0.95] text-foreground'>
+                    <h1 className='text-6xl sm:text-7xl lg:text-[6.5rem] font-heading font-black tracking-tighter leading-[0.95] text-foreground'>
                         BUILDING
                     </h1>
-                    <h1 className='text-5xl sm:text-6xl lg:text-[5.5rem] font-heading font-black tracking-tighter leading-[0.95] text-accent'>
+                    <h1 className='text-6xl sm:text-7xl lg:text-[6.5rem] font-heading font-black tracking-tighter leading-[0.95] text-accent'>
                         HIGH
                     </h1>
-                    <h1 className='text-5xl sm:text-6xl lg:text-[5.5rem] font-heading font-black tracking-tighter leading-[0.95] text-muted/30'>
+                    <h1 className='text-6xl sm:text-7xl lg:text-[6.5rem] font-heading font-black tracking-tighter leading-[0.95] text-muted/30'>
                         PRECISION
                     </h1>
                 </div>
 
-                <p className='text-sm sm:text-base text-muted max-w-xl leading-relaxed'>
-                    Engineering distributed systems, message queuing, and low-latency architectural patterns. Defined by performance, scalability, and deterministic reliability.
+                <p className='text-base sm:text-lg text-muted max-w-xl leading-relaxed'>
+                    Hi, I am Shivrajsinh Maharaul. I design and engineer high-performance backend systems, distributed architectures, and scalable web servers using Go. Focused on code efficiency, database optimization, and architectural clarity.
                 </p>
 
                 <a 
                     href="#projects" 
-                    className='inline-flex items-center gap-3 bg-accent text-background font-mono text-xs font-bold tracking-widest px-6 py-3.5 rounded-sm hover:bg-accent/90 transition-colors uppercase'
+                    className='inline-flex items-center gap-3 bg-accent text-background font-mono text-sm font-bold tracking-widest px-6 py-3.5 rounded-sm hover:bg-accent/90 transition-colors uppercase'
                 >
                     EXPLORE_PROJECTS
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
