@@ -14,8 +14,8 @@ const Navbar: React.FC = () => {
                         <p className='text-accent text-xl md:text-2xl lg:text-3xl font-bold'>Shivrajsinh Maharaul</p>
                     </div>
                     <div className='hidden md:flex items-center justify-around gap-8 text-muted text-sm font-semibold tracking-wider'>
+                        <a href="#skills" className='hover:text-accent transition duration-200'>SKILLS</a>
                         <a href="#projects" className='hover:text-accent transition duration-200'>PROJECTS</a>
-                        <a href="#philosophy" className='hover:text-accent transition duration-200'>PHILOSOPHY</a>
                         <a href="#footer" className='hover:text-accent transition duration-200'>CONTACT</a>
                     </div>
                     <div className='md:hidden'>
@@ -27,9 +27,9 @@ const Navbar: React.FC = () => {
                 <Separator />
                 {isMenuOpen &&
                     <div className='w-full md:hidden flex flex-col gap-2 p-3 text-start'>
-                        <a href="#projects" onClick={() => setMenuOpen(false)} className='text-muted hover:text-accent transition duration-200 text-sm font-semibold tracking-wider py-1.5'>PROJECTS</a>
+                        <a href="#skills" onClick={() => setMenuOpen(false)} className='text-muted hover:text-accent transition duration-200 text-sm font-semibold tracking-wider py-1.5'>SKILLS</a>
                         <Separator />
-                        <a href="#philosophy" onClick={() => setMenuOpen(false)} className='text-muted hover:text-accent transition duration-200 text-sm font-semibold tracking-wider py-1.5'>PHILOSOPHY</a>
+                        <a href="#projects" onClick={() => setMenuOpen(false)} className='text-muted hover:text-accent transition duration-200 text-sm font-semibold tracking-wider py-1.5'>PROJECTS</a>
                         <Separator />
                         <a href="#footer" onClick={() => setMenuOpen(false)} className='text-muted hover:text-accent transition duration-200 text-sm font-semibold tracking-wider py-1.5'>CONTACT</a>
                         <Separator />

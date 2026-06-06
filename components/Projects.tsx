@@ -63,7 +63,7 @@ const Projects: React.FC = () => {
     ];
 
     return (
-        <section className='flex items-center justify-center gap-10 p-5 min-h-[50vh] flex-col bg-background'>
+        <section id='projects' className='flex items-center justify-center gap-10 p-5 min-h-[80vh] flex-col bg-background'>
             <div className='flex items-center sm:items-start w-[82vw] justify-around flex-col'>
                 <p className='text-accent text-md border border-accent p-1 px-2 font-semibold rounded-lg'>PROJECTS</p>
             </div>

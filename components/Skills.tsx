@@ -2,7 +2,7 @@ import React from 'react'
 
 const Skills: React.FC = () => {
     return (
-        <section className='flex items-center justify-center gap-10 p-5 min-h-[50vh] flex-col bg-card'>
+        <section id="skills" className='flex items-center justify-center gap-10 p-5 min-h-[80vh] flex-col bg-card'>
             <div className='flex items-center md:items-start w-[82vw] justify-around flex-col'>
                 <p className='text-accent text-md border border-accent p-1 px-2 font-semibold rounded-lg'>TECH STACK</p>
             </div>
