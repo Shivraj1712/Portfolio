@@ -1,0 +1,147 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: var(--font-sans), system-ui, sans-serif;
+  --font-mono: var(--font-mono), ui-monospace, monospace;
+  --font-heading: var(--font-heading), var(--font-sans), system-ui, sans-serif;
+
+  --color-background: var(--bg-main);
+  --color-foreground: var(--text-main);
+  --color-muted: var(--text-muted);
+
+  --color-card: var(--bg-card);
+  --color-border: var(--border-line);
+
+  --color-accent: var(--neon-teal);
+  --color-accent-foreground: var(--bg-main);
+  --color-ring: var(--neon-teal);
+
+  --color-neon-teal: var(--neon-teal);
+  --color-neon-indigo: var(--neon-indigo);
+
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1.25rem;
+}
+
+:root {
+  --bg-main: #0f0f14;
+  --bg-card: rgba(26, 26, 34, 0.85);
+  --border-line: rgba(255, 255, 255, 0.14);
+  --text-main: oklch(0.97 0.005 240);
+  --text-muted: oklch(0.68 0.01 240);
+  --text-dim: oklch(0.42 0.01 240);
+
+  --neon-teal: oklch(0.74 0.16 165);
+  --neon-indigo: oklch(0.62 0.20 275);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/40 transition-colors duration-200 box-border;
+  }
+
+  html {
+    @apply bg-background text-foreground antialiased scroll-smooth;
+    font-family: var(--font-sans);
+  }
+
+  body {
+    @apply min-h-screen bg-background text-foreground flex flex-col selection:bg-neon-teal selection:text-background overflow-x-hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply text-foreground font-heading tracking-tight;
+  }
+
+  p {
+    @apply text-muted leading-relaxed font-sans;
+  }
+
+  code,
+  pre {
+    font-family: var(--font-mono);
+    @apply text-[11px] tracking-normal bg-[#08080a] border border-white/[0.14] rounded-md px-1.5 py-0.5 text-neon-teal;
+  }
+}
+
+/* Background Patterns */
+.bg-grid-pattern {
+  background-size: 50px 50px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+}
+
+.bg-dot-pattern {
+  background-size: 30px 30px;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.075) 1.2px, transparent 1.2px);
+}
+
+.radial-mask {
+  mask-image: radial-gradient(circle at center, black 30%, transparent 95%);
+}
+
+/* Glass Panels with a distinct, clean, 1.5px thick white border and top lighting */
+.glass-panel {
+  background: rgba(24, 24, 30, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1.5px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.12),
+    0 8px 32px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+}
+
+.glass-panel-hover {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(30, 30, 38, 0.9);
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.12),
+    0 12px 40px -10px oklch(0.74 0.16 165 / 0.15);
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #030303;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--neon-teal);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Animations */
+@keyframes code-flicker {
+  0%, 100% { opacity: 0.95; }
+  50% { opacity: 0.8; }
+}
+.animate-code-flicker {
+  animation: code-flicker 4s infinite ease-in-out;
+}
