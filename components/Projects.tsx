@@ -3,7 +3,6 @@
 import React, { useRef, useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { PROJECTS_DATA, SOCIAL_LINKS } from '@/data/portfolio'
-import { EvervaultCard } from '@/components/ui/EvervaultCard'
 
 interface ContributionDay {
   date: string;
@@ -133,56 +132,48 @@ const Projects: React.FC = () => {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
-                className="flex flex-col h-full w-full"
+                className="flex flex-col h-full w-full p-6 sm:p-8 font-mono text-[10px] text-muted gap-6"
               >
-                {/* Visual Image Showcase */}
-                <div className="h-[240px] w-full border-b border-white/[0.14] relative overflow-hidden bg-black/40">
-                  <EvervaultCard />
+                <div className="flex flex-col gap-2">
+                  <span className="text-[8px] text-muted/40 font-bold uppercase">PROJECT_DESCRIPTION:</span>
+                  <h3 className="text-xl font-black text-foreground font-heading uppercase">{pLattice.title}</h3>
+                  <p className="text-xs text-muted font-sans font-medium leading-relaxed mt-1">
+                    {pLattice.description}
+                  </p>
                 </div>
                 
-                {/* Description and tags */}
-                <div className="p-6 sm:p-8 flex flex-col gap-6 font-mono text-[10px] text-muted">
-                  <div className="flex flex-col gap-2">
-                    <span className="text-[8px] text-muted/40 font-bold uppercase">PROJECT_DESCRIPTION:</span>
-                    <h3 className="text-xl font-black text-foreground font-heading uppercase">{pLattice.title}</h3>
-                    <p className="text-xs text-muted font-sans font-medium leading-relaxed mt-1">
-                      {pLattice.description}
-                    </p>
+                <div className="bg-[#0b0b0e] border border-white/[0.14] rounded-xl p-5 flex flex-col gap-4">
+                  <div className="border-b border-white/[0.08] pb-2 flex justify-between items-center text-[9px] text-muted/40 font-bold uppercase">
+                    <span>// SYSTEM_MAP_SPEC</span>
+                    <span>LATTICE_ROUTE_MAP</span>
                   </div>
-
-                  <div className="bg-[#0b0b0e] border border-white/[0.14] rounded-xl p-5 flex flex-col gap-4">
-                    <div className="border-b border-white/[0.08] pb-2 flex justify-between items-center text-[9px] text-muted/40 font-bold uppercase">
-                      <span>// SYSTEM_MAP_SPEC</span>
-                      <span>LATTICE_ROUTE_MAP</span>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                    <div className="border border-white/[0.08] bg-[#141418] p-3 rounded-lg flex flex-col gap-1">
+                      <span className="text-neon-teal font-bold uppercase tracking-wider text-[8px]">Ingress layer</span>
+                      <p className="text-[9px] text-muted leading-relaxed font-sans font-medium">CRUD details & search filter.</p>
                     </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                      <div className="border border-white/[0.08] bg-[#141418] p-3 rounded-lg flex flex-col gap-1">
-                        <span className="text-neon-teal font-bold uppercase tracking-wider text-[8px]">Ingress layer</span>
-                        <p className="text-[9px] text-muted leading-relaxed font-sans font-medium">CRUD details & search filter.</p>
-                      </div>
-                      <div className="border border-white/[0.08] bg-[#141418] p-3 rounded-lg flex flex-col gap-1">
-                        <span className="text-neon-indigo font-bold uppercase tracking-wider text-[8px]">Logic router</span>
-                        <p className="text-[9px] text-muted leading-relaxed font-sans font-medium">Go/Gin verify & Goth OAuth.</p>
-                      </div>
-                      <div className="border border-white/[0.08] bg-[#141418] p-3 rounded-lg flex flex-col gap-1">
-                        <span className="text-foreground font-bold uppercase tracking-wider text-[8px]">Storage Cache</span>
-                        <p className="text-[9px] text-muted leading-relaxed font-sans font-medium">PG saves projects; Redis caches.</p>
-                      </div>
+                    <div className="border border-white/[0.08] bg-[#141418] p-3 rounded-lg flex flex-col gap-1">
+                      <span className="text-neon-indigo font-bold uppercase tracking-wider text-[8px]">Logic router</span>
+                      <p className="text-[9px] text-muted leading-relaxed font-sans font-medium">Go/Gin verify & Goth OAuth.</p>
+                    </div>
+                    <div className="border border-white/[0.08] bg-[#141418] p-3 rounded-lg flex flex-col gap-1">
+                      <span className="text-foreground font-bold uppercase tracking-wider text-[8px]">Storage Cache</span>
+                      <p className="text-[9px] text-muted leading-relaxed font-sans font-medium">PG saves projects; Redis caches.</p>
                     </div>
                   </div>
+                </div>
 
-                  <div className="flex flex-col gap-4 border-t border-white/[0.06] pt-4">
-                    <div className="flex flex-wrap gap-1.5">
-                      {pLattice.tags.map(tag => (
-                        <span key={tag} className="border border-white/[0.05] bg-[#0c0c10] text-foreground px-2 py-0.5 rounded text-[9px] font-bold">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                    <div className="flex justify-between items-center text-muted/40 text-[9px] font-bold">
-                      <span>VERIFIED: DECOUPLED // MODULAR</span>
-                      <span>TEST: 100% DI</span>
-                    </div>
+                <div className="flex flex-col gap-4 border-t border-white/[0.06] pt-4 mt-auto">
+                  <div className="flex flex-wrap gap-1.5">
+                    {pLattice.tags.map(tag => (
+                      <span key={tag} className="border border-white/[0.05] bg-[#0c0c10] text-foreground px-2 py-0.5 rounded text-[9px] font-bold">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="flex justify-between items-center text-muted/40 text-[9px] font-bold">
+                    <span>VERIFIED: DECOUPLED // MODULAR</span>
+                    <span>TEST: 100% DI</span>
                   </div>
                 </div>
               </motion.div>
@@ -381,9 +372,12 @@ const Projects: React.FC = () => {
                     </span>
                   </div>
                   
-                  <div className="flex flex-col gap-1 border-b border-white/[0.04] pb-2">
-                    <span className="text-muted/40 uppercase font-bold text-[8px]">PRIMARY_LANGUAGE:</span>
-                    <span className="text-neon-teal font-bold font-sans text-xs">Go (Golang)</span>
+                  <div className="flex flex-col gap-1.5 border-b border-white/[0.04] pb-2">
+                    <span className="text-muted/40 uppercase font-bold text-[8px]">PRIMARY_LANGUAGES:</span>
+                    <div className="flex flex-col gap-1 font-sans text-xs font-bold">
+                      <div><span className="text-muted/50 font-mono text-[9px] uppercase tracking-wide">DEV:</span> <span className="text-neon-teal">Go (Golang)</span></div>
+                      <div><span className="text-muted/50 font-mono text-[9px] uppercase tracking-wide">DSA:</span> <span className="text-neon-indigo">C++</span></div>
+                    </div>
                   </div>
                   
                   <div className="flex flex-col gap-1 border-b border-white/[0.04] pb-2">
