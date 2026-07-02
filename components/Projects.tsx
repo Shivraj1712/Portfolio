@@ -3,6 +3,7 @@
 import React, { useRef, useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { PROJECTS_DATA, SOCIAL_LINKS } from '@/data/portfolio'
+import { ChevronDown } from 'lucide-react'
 
 interface ContributionDay {
   date: string;
@@ -11,9 +12,21 @@ interface ContributionDay {
 
 const Projects: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null)
+  const dropdownRef = useRef<HTMLDivElement>(null)
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false)
   const [heatmap, setHeatmap] = useState<number[][]>([])
   const [totalContributions, setTotalContributions] = useState<number>(3142)
   const [activeTab, setActiveTab] = useState<string>("01") // Default is Lattice
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsDropdownOpen(false)
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside)
+    return () => document.removeEventListener("mousedown", handleClickOutside)
+  }, [])
 
   useEffect(() => {
     const fetchContributions = async () => {
@@ -85,8 +98,81 @@ const Projects: React.FC = () => {
       {/* Main Console Layout */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 w-full items-start">
         
-        {/* Left Side: System Selection Tabs (lg:col-span-5) */}
-        <div className="lg:col-span-5 flex flex-col gap-4 w-full">
+        {/* Custom Mobile Selection Dropdown (visible < lg) */}
+        <div ref={dropdownRef} className="lg:hidden col-span-1 w-full relative z-30 mb-2">
+          <label className="block text-[8px] font-mono font-bold tracking-widest text-muted/40 uppercase mb-2">
+            UNIT_SELECT // SYSTEMS_CONSOLE
+          </label>
+          
+          {/* Selector Button */}
+          <button
+            onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+            className="w-full flex justify-between items-center bg-[#0c0c10] border border-white/[0.14] text-foreground font-mono text-[10px] rounded-xl p-4 cursor-pointer focus:outline-none focus:border-neon-teal transition-all duration-300 uppercase tracking-wider text-left"
+          >
+            <div className="flex flex-col gap-1">
+              <span className="text-[7px] font-bold text-neon-teal/60">
+                ACTIVE_UNIT: UNIT_0{activeTab}
+              </span>
+              <span className="font-bold text-foreground">
+                {consoleTabs.find(t => t.id === activeTab)?.name}
+              </span>
+            </div>
+            <motion.div
+              animate={{ rotate: isDropdownOpen ? 180 : 0 }}
+              transition={{ duration: 0.2 }}
+              className="text-neon-teal"
+            >
+              <ChevronDown className="h-4 w-4" />
+            </motion.div>
+          </button>
+
+          {/* Animated Options List */}
+          <AnimatePresence>
+            {isDropdownOpen && (
+              <motion.div
+                initial={{ opacity: 0, y: -8, scale: 0.96 }}
+                animate={{ opacity: 1, y: 4, scale: 1 }}
+                exit={{ opacity: 0, y: -8, scale: 0.96 }}
+                transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                className="absolute left-0 right-0 w-full mt-1.5 p-2 flex flex-col gap-1 z-40 bg-[#0d0d12] border border-white/[0.12] rounded-xl shadow-[0_12px_40px_rgba(0,0,0,0.9)]"
+              >
+                {consoleTabs.map((tab) => {
+                  const isActive = activeTab === tab.id
+                  return (
+                    <button
+                      key={tab.id}
+                      onClick={() => {
+                        setActiveTab(tab.id)
+                        setIsDropdownOpen(false)
+                      }}
+                      className={`w-full text-left p-3 rounded-lg flex justify-between items-center font-mono transition-all duration-200 cursor-pointer ${
+                        isActive
+                          ? "bg-neon-teal/10 border border-neon-teal/30 text-neon-teal font-bold"
+                          : "border border-transparent text-muted hover:text-foreground hover:bg-white/[0.04]"
+                      }`}
+                    >
+                      <div className="flex flex-col gap-0.5">
+                        <span className={`text-[7px] uppercase font-bold tracking-widest ${isActive ? "text-neon-teal" : "text-muted/30"}`}>
+                          UNIT_0{tab.id} // SECURE_PORT
+                        </span>
+                        <span className="text-[10px] font-bold uppercase font-heading">
+                          {tab.name}
+                        </span>
+                      </div>
+                      {isActive && (
+                        <span className="h-1.5 w-1.5 rounded-full bg-neon-teal animate-pulse" />
+                      )}
+                    </button>
+                  )
+                })}
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+
+
+        {/* Left Side: System Selection Tabs (lg:col-span-5, hidden on mobile) */}
+        <div className="hidden lg:flex lg:col-span-5 flex-col gap-4 w-full">
           {consoleTabs.map((tab) => {
             const isActive = activeTab === tab.id
             return (
