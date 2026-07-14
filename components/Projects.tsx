@@ -257,9 +257,22 @@ const Projects: React.FC = () => {
                       </span>
                     ))}
                   </div>
-                  <div className="flex justify-between items-center text-muted/40 text-[9px] font-bold">
-                    <span>VERIFIED: DECOUPLED // MODULAR</span>
-                    <span>TEST: 100% DI</span>
+                  <div className="flex gap-6 text-[9px] font-bold uppercase border-t border-white/[0.06] pt-4">
+                    {pLattice.githubUrl && (
+                      <a href={pLattice.githubUrl} target="_blank" rel="noopener noreferrer" className="text-neon-teal hover:underline tracking-widest">
+                        [SRC_REPOS]
+                      </a>
+                    )}
+                    {pLattice.liveUrl && (
+                      <a href={pLattice.liveUrl} target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-neon-teal transition-colors hover:underline tracking-widest">
+                        [LIVE_DEMO]
+                      </a>
+                    )}
+                    {pLattice.backendUrl && (
+                      <a href={pLattice.backendUrl} target="_blank" rel="noopener noreferrer" className="text-muted/60 hover:text-neon-teal transition-colors hover:underline tracking-widest">
+                        [BACKEND_API]
+                      </a>
+                    )}
                   </div>
                 </div>
               </motion.div>

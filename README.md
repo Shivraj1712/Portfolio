@@ -32,6 +32,7 @@ I build clean, safe, and fast backend systems. I focus on database performance a
 * **Overview:** A website where you can share your projects and look at projects posted by others, similar to Dribbble.
 * **Key Architecture:** Built with Go and uses Fiber. It handles session token and Goth OAuth logins, saves project details in a database, lets users upload files, and searches for projects quickly.
 * **Tech Stack:** `Go (Golang)`, `Fiber v2`, `GORM`, `Neon PostgreSQL`, `Redis`, `Session Tokens`, `Goth (OAuth)`, `Cloudinary`, `Docker`
+* 🔗 **Backend API:** [lattice-xd9g.onrender.com](https://lattice-xd9g.onrender.com) | **Frontend:** [latticegoproject.vercel.app](https://latticegoproject.vercel.app) | **Swagger Docs:** [API Documentation](https://lattice-xd9g.onrender.com/swagger/)
 
 ### 🪙 **SpendGrid – Expense Tracker**
 * **Overview:** A simple website to track how much money you spend.

@@ -21,6 +21,9 @@ export const PROJECTS_DATA: Project[] = [
     description: "A project showcase platform similar to Dribbble. You can post, edit, and delete (CRUD) your own projects, check developer profiles, and view project details. For safety, users cannot edit other people's projects. It includes project searching with filters.",
     architecture: "Built with Go and Fiber. It handles session token and Goth OAuth logins, saves project details in a PostgreSQL database using GORM, and uses Redis for session memory.",
     tags: ["GO (GOLANG)", "FIBER", "GORM", "NEON POSTGRESQL", "REDIS", "SESSION TOKENS", "GOTH (OAUTH)", "CLOUDINARY", "DOCKER"],
+    githubUrl: "https://github.com/Shivraj1712/Lattice",
+    liveUrl: "https://latticegoproject.vercel.app",
+    backendUrl: "https://lattice-xd9g.onrender.com",
   },
   {
     id: "02",
