@@ -70,7 +70,7 @@ const Projects: React.FC = () => {
   const consoleTabs = [
     { id: "01", name: "Lattice Showcase Platform", spec: "Dribbble-like Share Feed" },
     { id: "02", name: "SpendGrid Expense tracker", spec: "Decoupled Financial API" },
-    { id: "04", name: "Noteitdown System", spec: "Markdown Notes Organizer" },
+    { id: "04", name: "NoteItDown Manager", spec: "Full-Stack Notes System" },
     { id: "05", name: "GitHub Contribution monitor", spec: "Real-time Commit Matrix" },
     { id: "06", name: "Shivrajsinh Dispatch profile", spec: "Core Systems Telemetry" },
   ]
@@ -240,7 +240,7 @@ const Projects: React.FC = () => {
                     </div>
                     <div className="border border-white/[0.08] bg-[#141418] p-3 rounded-lg flex flex-col gap-1">
                       <span className="text-neon-indigo font-bold uppercase tracking-wider text-[8px]">Logic router</span>
-                      <p className="text-[9px] text-muted leading-relaxed font-sans font-medium">Go/Gin verify & Goth OAuth.</p>
+                      <p className="text-[9px] text-muted leading-relaxed font-sans font-medium">Go/Fiber verify & Goth OAuth.</p>
                     </div>
                     <div className="border border-white/[0.08] bg-[#141418] p-3 rounded-lg flex flex-col gap-1">
                       <span className="text-foreground font-bold uppercase tracking-wider text-[8px]">Storage Cache</span>
@@ -352,10 +352,12 @@ const Projects: React.FC = () => {
                 </div>
 
                 <div className="bg-[#0b0b0e] border border-white/[0.14] rounded-xl p-5 flex flex-col gap-3">
-                  <span className="text-neon-teal font-bold block border-b border-white/[0.04] pb-1.5 mb-1 text-[9px] uppercase tracking-wider">// Markdown Preview System</span>
-                  <div className="flex flex-col gap-1 text-[9px] text-muted/60">
-                    <span className="block">&gt; simple note organizer client</span>
-                    <span className="block">- compiled next.js build pages</span>
+                  <span className="text-neon-teal font-bold block border-b border-white/[0.04] pb-1.5 mb-1 text-[9px] uppercase tracking-wider">// Full-Stack Architecture</span>
+                  <div className="flex flex-col gap-1 text-[9px] text-muted/60 leading-relaxed">
+                    <span className="block">&gt; Next.js Server Actions for CRUD operations</span>
+                    <span className="block">&gt; Clerk Middleware-protected session layers</span>
+                    <span className="block">&gt; MongoDB (Mongoose) document data store</span>
+                    <span className="block">&gt; Schema-first data validation via Zod</span>
                   </div>
                 </div>
 

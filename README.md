@@ -1,6 +1,6 @@
 # 👋 Hi, I’m **Shivrajsinh Maharaul**
 
-### 💻 Backend Software Engineer | Go (Golang) • Gin • Go Fiber | Redis | PostgreSQL | C++ (DSA)  
+### 💻 Backend Software Engineer | Go (Golang) • Go Fiber | Redis | PostgreSQL | C++ (DSA)  
 > **I build clean, fast, and secure backend systems, optimize data pipelines, and write efficient algorithms.**
 
 ---
@@ -20,7 +20,7 @@ I build clean, safe, and fast backend systems. I focus on database performance a
 | Category | Tools & Technologies |
 | :--- | :--- |
 | **Languages** | ![Go](https://img.shields.io/badge/Go_/_Golang-00ADD8?style=for-the-badge&logo=go&logoColor=white) ![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white) |
-| **Frameworks & Runtimes** | ![Gin](https://img.shields.io/badge/Gin-00ADD8?style=for-the-badge) ![Fiber](https://img.shields.io/badge/Fiber__v2-00838F?style=for-the-badge) ![Node.js](https://img.shields.io/badge/Node.js-3C873A?style=for-the-badge&logo=node.js&logoColor=white) |
+| **Frameworks & Runtimes** | ![Fiber](https://img.shields.io/badge/Fiber__v2-00838F?style=for-the-badge) ![Node.js](https://img.shields.io/badge/Node.js-3C873A?style=for-the-badge&logo=node.js&logoColor=white) |
 | **Databases & Caching** | ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white) ![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white) ![GORM](https://img.shields.io/badge/GORM-00BCD4?style=for-the-badge&logo=go&logoColor=white) |
 | **Auth & Cloud Systems** | ![OAuth2](https://img.shields.io/badge/OAuth2_/_Goth-000000?style=for-the-badge&logo=google&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white) |
 
@@ -30,8 +30,8 @@ I build clean, safe, and fast backend systems. I focus on database performance a
 
 ### 🏗️ **Lattice – Project Sharing Site**
 * **Overview:** A website where you can share your projects and look at projects posted by others, similar to Dribbble.
-* **Key Architecture:** Built with Go and uses Gin/Fiber. It handles session token and Goth OAuth logins, saves project details in a database, lets users upload files, and searches for projects quickly.
-* **Tech Stack:** `Go (Golang)`, `Gin`, `GORM`, `Neon PostgreSQL`, `Redis`, `Session Tokens`, `Goth (OAuth)`, `Cloudinary`, `Docker`
+* **Key Architecture:** Built with Go and uses Fiber. It handles session token and Goth OAuth logins, saves project details in a database, lets users upload files, and searches for projects quickly.
+* **Tech Stack:** `Go (Golang)`, `Fiber v2`, `GORM`, `Neon PostgreSQL`, `Redis`, `Session Tokens`, `Goth (OAuth)`, `Cloudinary`, `Docker`
 
 ### 🪙 **SpendGrid – Expense Tracker**
 * **Overview:** A simple website to track how much money you spend.
@@ -39,10 +39,10 @@ I build clean, safe, and fast backend systems. I focus on database performance a
 * **Tech Stack:** `Go (Golang)`, `Fiber v2`, `GORM`, `Neon PostgreSQL`, `Next.js (App Router)`
 * 🔗 **Backend API:** [spendgrid-2.onrender.com](https://spendgrid-2.onrender.com) | **Frontend:** [spend-grid-lovat.vercel.app](https://spend-grid-lovat.vercel.app)
 
-### 📝 **Noteitdown – Notes Organizer**
-* **Overview:** A simple notes website for writing and keeping formatted notes.
-* **Key Architecture:** Built with Next.js, React, and Tailwind CSS, and hosted on Vercel.
-* **Tech Stack:** `Next.js (App Router)`, `React`, `Tailwind CSS`, `Vercel`
+### 📝 **NoteItDown – Notes Manager**
+* **Overview:** A high-performance notes manager app featuring secure middleware-protected routing, intelligent quick-searching, and dynamic note categorization.
+* **Key Architecture:** Built on Next.js 15 (App Router) utilizing MongoDB with Mongoose for data persistence and Clerk for secure authentication. Employs Zod schemas for strict validation and Next.js Server Actions for backend CRUD operations.
+* **Tech Stack:** `Next.js 15 (App Router)`, `Clerk Auth`, `MongoDB`, `Zod`, `Shadcn UI`, `Server Actions`
 
 ---
 

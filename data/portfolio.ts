@@ -19,8 +19,8 @@ export const PROJECTS_DATA: Project[] = [
     id: "01",
     title: "Lattice – Project Sharing Site",
     description: "A project showcase platform similar to Dribbble. You can post, edit, and delete (CRUD) your own projects, check developer profiles, and view project details. For safety, users cannot edit other people's projects. It includes project searching with filters.",
-    architecture: "Built with Go and Gin. It handles session token and Goth OAuth logins, saves project details in a PostgreSQL database using GORM, and uses Redis for session memory.",
-    tags: ["GO (GOLANG)", "GIN", "GORM", "NEON POSTGRESQL", "REDIS", "SESSION TOKENS", "GOTH (OAUTH)", "CLOUDINARY", "DOCKER"],
+    architecture: "Built with Go and Fiber. It handles session token and Goth OAuth logins, saves project details in a PostgreSQL database using GORM, and uses Redis for session memory.",
+    tags: ["GO (GOLANG)", "FIBER", "GORM", "NEON POSTGRESQL", "REDIS", "SESSION TOKENS", "GOTH (OAUTH)", "CLOUDINARY", "DOCKER"],
   },
   {
     id: "02",
@@ -34,10 +34,11 @@ export const PROJECTS_DATA: Project[] = [
   },
   {
     id: "03",
-    title: "Noteitdown System",
-    description: "A simple markdown notes website. It is built with Next.js, React, and Tailwind CSS, and hosted on Vercel.",
-    tags: ["NEXT.JS", "REACT", "TAILWIND CSS"],
-    githubUrl: "https://github.com/Shivraj1712/notetdown-with-nextjs",
+    title: "NoteItDown – Notes Manager",
+    description: "A high-performance notes manager application featuring secure middleware-protected routing, intelligent quick-searching, and dynamic note categorization. Utilizes a Master-Detail UI layout for seamless editing and quick viewing.",
+    architecture: "Built on Next.js 15 (App Router) using Server Actions for backend logic, MongoDB (Mongoose) for database storage, Clerk for secure user management, and Zod for schema-first validation.",
+    tags: ["NEXT.JS 15", "CLERK AUTH", "MONGODB", "ZOD", "SHADCN UI", "SERVER ACTIONS"],
+    githubUrl: "https://github.com/Shivraj1712/NoteItDown",
     liveUrl: "https://notetdown-with-nextjs.vercel.app/",
   },
 ];
@@ -50,9 +51,8 @@ export const LANGUAGES_DATA: SkillItem[] = [
 ];
 
 export const FRAMEWORKS_DATA: SkillItem[] = [
-  { name: "GIN", code: "01" },
-  { name: "FIBER", code: "02" },
-  { name: "NODE.JS", code: "03" },
+  { name: "FIBER", code: "01" },
+  { name: "NODE.JS", code: "02" },
 ];
 
 export const DATABASES_DATA: SkillItem[] = [
